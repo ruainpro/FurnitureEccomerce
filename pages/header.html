@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Header</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min-4.3.1.css"/>
+    <link
+        rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+        <div class="container">
+            <img src="../images/fURNITURELOGO.png" alt="" style="width:120px; height:auto;"/>
+            <h2 style="margin-left: 15px; font-family: Pacifico;">RuAin Furniture</h2>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span><i id="bar" class="fas fa-bars"></i></span>
+            </button>
+            
+            <!-- Toast Alert -->
+            <!-- <div class="toast ml-5" role="alert" data-bs-delay="3000" aria-live="assertive" aria-atomic="true">
+                <button id="toast-body" style="background-color: #fb774b;">
+                    <a href="cart.html" style="text-decoration:none; color: white">
+                        <i class="fas fa-bell"></i>&#8194;Item Added: Go to Cart
+                    </a>
+                </button>
+            </div> -->
+
+            <!-- The Modal -->
+    <!-- Item Added to Cart Modal -->
+
+  
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../pages/main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/aboutus.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="cartGroup" href="../pages/search.html"><i class="fal fa-search"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/cart.html"><i class="fal fa-shopping-bag"><span>(0)</span></i></a>
+                    </li>
+                    
+                    <li class="nav-item" id="loginFalse">
+                        <a class="nav-link d-flex align-items-center" href="../pages/login.html">
+                            <i class="fa fa-user mr-2"></i>Login
+                        </a>
+                        <a class="nav-link d-flex align-items-center ml-3" href="../pages/register.html">
+                            <i class="fa fa-user-plus mr-2"></i>Register
+                        </a>
+                    </li>                    
+                    
+                    <li class="nav-item dropdown text-end" id="loginTrue" style="display: none;">
+                        <a  class="d-block text-decoration-none dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" id="greeting">Hello, User</a>
+                            <a class="dropdown-item" href="#" id="signOut"><b>Sign out</b></a>
+                        </div>
+                    </li>                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>

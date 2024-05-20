@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/fURNITURELOGO.png" type="image/icon type">
+    <title>FAQ - RuAin Furniture</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min-4.3.1.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <style>
+        /* Custom FAQ Styles */
+        .faq-header {
+            margin-top: 100px;
+            background-color: #282A35;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .faq-header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 4rem;
+            text-decoration: none;
+            transition: text-decoration-color 0.3s;
+        }
+        
+        .faq-header h1:hover {
+            text-decoration: underline;
+            text-decoration-color: #FF7F50;
+            text-underline-offset: 10px; /* Adjust the value to create the desired gap */
+        }
+
+        .faq-section {
+            padding: 40px 0;
+        }
+
+        .faq-item {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item .card-header {
+            background-color: #343a40;
+            color: #fff;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item .card-body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .faq-item .card-header:hover,
+        .faq-item .card-header:focus {
+            background-color: #495057;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Dynamic  -->
+    <div id="header-placeholder"></div>
+
+    <!-- FAQ Header -->
+    <div class="faq-header">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container faq-section">
+        <div class="accordion" id="faqAccordion">
+            <div class="faq-item card">
+                <div class="card-header" id="faqHeading1" data-toggle="collapse" data-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    What is Our return policy?
+                </div>
+                <div id="faq1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        We offer a 30-day return policy on all items. Please ensure that the items are returned in their original condition with all tags attached.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item card">
+                <div class="card-header" id="faqHeading2" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    How can I track my order?
+                </div>
+                <div id="faq2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Once your order is shipped, you will receive a tracking number via email. You can use this number on our website to track the status of your shipment.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item card">
+                <div class="card-header" id="faqHeading3" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    What payment methods do you accept?
+                </div>
+                <div id="faq3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        We accept various payment methods including Visa, MasterCard, PayPal, and other major credit cards.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item card">
+                <div class="card-header" id="faqHeading4" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    How to Contact for some issues or reasons?
+                </div>
+                <div id="faq4" class="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Visit our website! You can contact us by submitting a form, sending us an email, or giving us a call.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
+
+    <script src="../libraries/jquery.min-3.5.1.js" type='text/javascript'></script>
+    <script src="../libraries/popper.min-2.9.2.js" type='text/javascript'></script>
+    <script src="../libraries/bootstrap_4_3_1.min.js" type='text/javascript'></script>
+
+    <script src="../scripts/commonScripts.js"></script>
+    <script src="../scripts/main.js"></script>
+
+</body>
+</html>

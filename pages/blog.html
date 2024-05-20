@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/fURNITURELOGO.png" type="image/icon type">
+
+    <title>Blog - RuAin Furniture</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min-4.3.1.css"/>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Custom Blog Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+
+        .blog-header {
+            margin-top: 100px;
+            background-color: #282A35;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .blog-header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 4rem;
+            text-decoration: none;
+            transition: text-decoration-color 0.3s;
+        }
+        
+        .blog-header h1:hover {
+            text-decoration: underline;
+            text-decoration-color: #FF7F50;
+            text-underline-offset: 10px; /* Adjust the value to create the desired gap */
+        }
+        .blog-posts {
+            padding: 40px 0;
+        }
+
+        .blog-post {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .blog-post-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blog-post-title {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #000000;
+        }
+
+        .blog-post-meta {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .blog-post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .sidebar {
+            padding: 40px 0;
+        }
+
+        .sidebar .card {
+            margin-bottom: 20px;
+        }
+
+        .sidebar .card-header {
+            background-color: #282A35;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .sidebar .card-body ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar .card-body ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar .card-body ul li a {
+            text-decoration: none;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .sidebar .card-body ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .pagination {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pagination li {
+            margin: 0 5px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: #282A35;
+            border: 1px solid #282A35;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .pagination a:hover,
+        .pagination a.active {
+            background-color: #282A35;
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            color: #6c757d;
+        }
+
+        .footer a {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="header-placeholder"></div>
+
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <h1>Our Blog</h1>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="container blog-posts">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-post">
+                    <div class="blog-post-image-container">
+                        <img src="../images/blog/ways-to-spice-up-your-current-wardrobe.jpg" alt="Blog Post Image">
+                    </div>
+                    <h2 class="blog-post-title">How to Style Your Wardrobe This Season</h2>
+                    <p class="blog-post-meta">July 31, 2023 by <a href="#">Admin</a></p>
+                    <p class="blog-post-content">Explore the latest fashion trends and tips on how to update your wardrobe for the season. Whether you're looking for casual outfits or something more formal, we've got you covered.</p>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-post">
+                    <div class="blog-post-image-container">
+                        <img src="../images/blog/sustainable-furniture.jpg" alt="Blog Post Image">
+                    </div>
+                    <h2 class="blog-post-title">Sustainable Fashion: A Guide</h2>
+                    <p class="blog-post-meta">June 15, 2023 by <a href="#">Admin</a></p>
+                    <p class="blog-post-content">Discover the importance of sustainable fashion and how you can make a positive impact with your clothing choices. From eco-friendly fabrics to ethical brands, learn more here.</p>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-post">
+                    <div class="blog-post-image-container">
+                        <img src="../images/blog/Top Accessories to Elevate Your Look.jpeg" alt="Blog Post Image">
+                    </div>
+                    <h2 class="blog-post-title">Top Accessories to Elevate Your Look</h2>
+                    <p class="blog-post-meta">May 20, 2023 by <a href="#">Admin</a></p>
+                    <p class="blog-post-content">Accessories can make or break an outfit. Check out our top picks for accessories that will elevate your look, whether you're dressing up for a special occasion or keeping it casual.</p>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <ul class="pagination">
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 sidebar">
+                <!-- Search Widget -->
+                <div class="card">
+                    <div class="card-header">
+                        Search
+                    </div>
+                    <div class="card-body">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-append">
+                                    <button class="btn btn-dark" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card">
+                    <div class="card-header">
+                        Categories
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Trends</a></li>
+                            <li><a href="#">Style Tips</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Recent Posts Widget -->
+                <div class="card">
+                    <div class="card-header">
+                        Recent Posts
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="#">How to Style Your Wardrobe This Season</a></li>
+                            <li><a href="#">Sustainable Fashion: A Guide</a></li>
+                            <li><a href="#">Top Accessories to Elevate Your Look</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="../libraries/jquery.slim.min.js" type='text/javascript'></script>
+    <script src="../libraries/popper.min-2.9.2.js" type='text/javascript'></script>
+    <script src="../libraries/bootstrap.min-5.0.2.js" type='text/javascript'></script>
+
+    <script src="../scripts/commonScripts.js" type='text/javascript'></script>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

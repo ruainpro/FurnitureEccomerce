@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>RuAin Furniture</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="icon" href="../images/fURNITURELOGO.png" type="image/icon type">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../css/bootstrap.min-4.3.1.css"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/style.css"/>
+
+    <style>
+        .products-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+
+
+        .products-container {
+            max-width: 650px;
+            justify-content: space-around;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .products-container i {
+            font-size: 25px;
+            color: #fb774b;
+            margin-left: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .product {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid lightgray
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<div id="header-placeholder"></div>
+
+
+<section class="container my-5 py-5">
+    <h2 class="container mt-5" style="text-align: center;">Looking for Something?</h2>
+    <div class="container input-group rounded mt-5">
+        <input type="search" class="form-control rounded" id="searchBar" placeholder="Search" aria-label="Search"
+               aria-describedby="search-addon"/>
+        <span class="input-group-text border-0" style="background-color:coral" id="search-addon">
+              <i class="fas fa-search" style="background-color:coral; color:white"></i>
+            </span>
+    </div>
+    <div class="products-container">
+        <div class="products">
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
+
+<div class="modal fade" id="itemAddedModal" tabindex="-1" role="dialog" aria-labelledby="itemAddedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="itemAddedModalLabel"><i class="fas fa-bell"></i>&#8194;Item Added to Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Your item has been added to the cart successfully. You can continue shopping or go to the cart to complete your purchase.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Continue Shopping</button>
+                <button class="btn btn-primary" onclick="window.location.href='cart.html';">Go To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../libraries/popper.min-2.9.2.js"  type='text/javascript'></script>
+<script src="../libraries/bootstrap.min-5.0.2.js"  type='text/javascript'></script>
+<script src="../libraries/jquery.min-3.5.1.js"  type='text/javascript'></script>
+
+<script src="../scripts/commonScripts.js" type='text/javascript'></script>
+<script src="../scripts/src.js"></script>
+<script src="../scripts/main.js"></script>
+
+</body>
+</html>

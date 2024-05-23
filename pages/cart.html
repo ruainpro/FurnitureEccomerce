@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>RuAin Furniture</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="icon" href="../images/fURNITURELOGO.png" type="image/icon type">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../css/bootstrap.min-4.3.1.css"/>
+    <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/style.css"/>
+
+    <style>
+        body {
+            color: #000;
+            overflow-x: hidden;
+            height: 100%;
+            background-color: #fff;
+            background-repeat: no-repeat
+        }
+
+        .plus-minus {
+            position: relative
+        }
+
+        .plus {
+            position: absolute;
+            top: -4px;
+            left: 2px;
+            cursor: pointer
+        }
+
+        .minus {
+            position: absolute;
+            top: 8px;
+            left: 5px;
+            cursor: pointer
+        }
+
+        .vsm-text:hover {
+            color: #FF5252
+        }
+
+        .book,
+        .book-img {
+            width: 120px;
+            height: 180px;
+            border-radius: 5px
+        }
+
+        .book {
+            margin: 20px 15px 5px 15px
+        }
+
+        .border-top {
+            border-top: 1px solid #EEEEEE !important;
+            margin-top: 20px;
+            padding-top: 15px
+        }
+
+        .card {
+            margin: 40px 0px;
+            padding: 40px 50px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.2)
+        }
+
+        input,
+        textarea {
+            background-color: #fb774b44;
+            padding: 8px 15px 8px 15px;
+            width: 100%;
+            border-radius: 5px !important;
+            box-sizing: border-box;
+            border: 1px solid #F3E5F5;
+            font-size: 15px !important;
+            color: #000 !important;
+            font-weight: 300
+        }
+
+        input:focus,
+        textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #9FA8DA;
+            outline-width: 0;
+            font-weight: 400
+        }
+
+        button:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            outline-width: 0
+        }
+
+        .pay {
+            width: 80px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #673AB7;
+            margin: 10px 20px 10px 0px;
+            cursor: pointer;
+            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.2)
+        }
+
+        .gray {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+            color: #E0E0E0
+        }
+
+        .gray .pay {
+            box-shadow: none
+        }
+
+        #tax {
+            border-top: 1px lightgray solid;
+            margin-top: 10px;
+            padding-top: 10px
+        }
+
+        .btn-blue {
+            border: none;
+            border-radius: 10px;
+            background-color: #fb774b;
+            color: #fff;
+            padding: 8px 15px;
+            margin: 20px 0px;
+            cursor: pointer
+        }
+
+        .btn-blue:hover {
+            background-color: #2a2a2a;
+            color: #fff
+        }
+
+        #checkout {
+            float: left
+        }
+
+        #check-amt {
+            float: right
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .book,
+            .book-img {
+                width: 100px;
+                height: 150px
+            }
+
+            .card {
+                padding-left: 15px;
+                padding-right: 15px
+            }
+
+            .mob-text {
+                font-size: 13px
+            }
+
+            .pad-left {
+                padding-left: 20px
+            }
+        }
+
+        .products-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+
+
+        .products-container {
+            max-width: 650px;
+            justify-content: space-around;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .products-container i {
+            font-size: 25px;
+            color: #fb774b;
+            margin-left: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .products-header {
+            width: 100%;
+            max-width: 650px;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 4px solid lightgray;
+            margin: 0 auto;
+        }
+
+        .products-title {
+            width: 45%;
+            text-align: center;
+        }
+
+        .price {
+            width: 15%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .price h5 {
+            text-align: center;
+        }
+
+        .quantity {
+            width: 30%;
+            /* border-bottom: 1px solid lightgray; */
+            display: flex;
+            align-items: center;
+        }
+
+
+        .total {
+            width: 10%;
+            /* border-bottom: 4px solid lightgray; */
+            display: flex;
+            align-items: center;
+        }
+
+        .product {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid lightgray
+        }
+
+        .basketTotalContainer, .AC {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .AC button {
+            background-color: #fb774b
+        }
+
+        .AC button:hover {
+            background-color: #2a2a2a;
+            transition: 0.3s all;
+        }
+
+        .basketTotalTitle {
+            width: 30%;
+        }
+
+        .basketTotal {
+            width: 10%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<div aria-live="polite" aria-atomic="true" class=" bg-dark position-relative bd-example-toasts">
+    <div class="toast-container position-absolute p-3" id="toastPlacement">
+        <div class="toast">
+            <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="my-5 py-5">
+    <h2 class="container mt-5" style="text-align: center;">Your Cart</h2>
+    <div class="products-container">
+        <div class="products-header">
+            <h5 class="products-title">PRODUCT</h5>
+            <h5 class="price">&#8194;PRICE</h5>
+            <h5 class="quantity">&#8195;QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+        </div>
+
+        <div class="products">
+        </div>
+
+        <div id="addhere" style="padding-top:20px; text-align:center"></div>
+    </div>
+    <div class="container" id="addherere">
+        <h2 style="text-align:center"><i class="fas fa-sort-down"></i>&#8194 Checkout Here &#8194<i
+                class="fas fa-sort-down"></i></h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-lg-3 radio-group">
+                            <div class="row d-flex px-3 radio"><img class="pay" src="../images/rt/masterCard.jpg">
+                                <p class="my-auto">Credit Card</p>
+                            </div>
+                            <div class="row d-flex px-3 radio gray"><img class="pay" src="../images/rt/visa.jpg">
+                                <p class="my-auto">Debit Card</p>
+                            </div>
+                            <div class="row d-flex px-3 radio gray mb-3"><img class="pay" src="../images/rt/paypal.jpg">
+                                <p class="my-auto">PayPal</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="row px-2">
+                                <div class="form-group col-md-6">
+                                    <label class="form-control-label">Name on Card</label>
+                                    <input type="text" id="cname" name="cname" placeholder="Johnny Doe">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-control-label">Card Number</label>
+                                    <input type="text" id="cnum" name="cnum" placeholder="1111 2222 3333 4444">
+                                </div>
+                            </div>
+                            <div class="row px-2">
+                                <div class="form-group col-md-6">
+                                    <label class="form-control-label">Expiration Date</label>
+                                    <input type="text" id="exp" name="exp" placeholder="MM/YYYY">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-control-label">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="***">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-2">
+                            <div class="row d-flex justify-content-between px-4">
+                                <p class="mb-1 text-left">Subtotal</p>
+                                <h6 class="mb-1 text-right" id="final">$0</h6>
+                            </div>
+                            <div class="row d-flex justify-content-between px-4">
+                                <p class="mb-1 text-left">Tax</p>
+                                <h6 class="mb-1 text-right">$2.99</h6>
+                            </div>
+                            <div class="row d-flex justify-content-between px-4" id="tax">
+                                <p class="mb-1 text-left">Total (Tax included)</p>
+                                <h6 class="mb-1 text-right" id="finalT">$0</h6>
+                            </div>
+                            <button class="btn-block btn-blue" onclick="successfulCheckout()"><span> <span
+                                    id="checkout">Checkout</span> <span id="check-amt">$0</span> </span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
+
+<script src="../libraries/popper.min-2.9.2.js" type='text/javascript'></script>
+<script src="../libraries/bootstrap.min-5.0.2.js" type='text/javascript'></script>
+<script src="../libraries/jquery.min-3.5.1.js" type='text/javascript'></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="../scripts/commonScripts.js"></script>
+<script src="../scripts/main.js"></script>
+
+<script>    $(document).ready(function () {
+    //console.log("here");
+    $('.radio-group .radio').click(function () {
+        $('.radio').addClass('gray');
+        $(this).removeClass('gray');
+    });
+
+    $('.plus-minus .plus').click(function () {
+        var count = $(this).parent().prev().text();
+        $(this).parent().prev().html(Number(count) + 1);
+    });
+
+    $('.plus-minus .minus').click(function () {
+        var count = $(this).parent().prev().text();
+        $(this).parent().prev().html(Number(count) - 1);
+    });
+
+});
+$(document).ready(function () {
+    $('.buy-btn').click(function () {
+        $('.toast').toast('show');
+    })
+});
+</script>
+</body>
+</html>

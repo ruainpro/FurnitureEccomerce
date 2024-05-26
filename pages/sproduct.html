@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/fURNITURELOGO.png" type="image/icon type">
+    <title>Product Details</title>
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../css/bootstrap.min-4.3.1.css"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/style.css"/>
+
+    <style>
+        .small-img-group{
+            display: flex;
+            justify-content: space-between;
+        }
+        .small-img-col{
+            flex-basis:23%;
+            cursor:pointer;
+        }
+
+        .sproduct select{
+            display:block; 
+            padding: 5px 10px;
+        }
+
+        .sproduct input{
+            width:50px;
+            height:40px;
+            padding-left: 10px;
+            font-size:16px;
+            margin-right: 10px;
+        }
+
+        .sproduct input:focus{
+            outline:none;
+        }
+
+        .buy-btn{
+            background: #fb774b;
+            opacity: 1;
+            transition: 0.3s all;
+        }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <div id="header-placeholder"></div>
+
+    <section class="container sproduct my-5 pt-5">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 pb-1" src="" id="MainImg" alt="pgs">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6 id="subcat"></h6>
+                <h3 class="py-4" id="title">Men's Fashion T-shirt</h3>
+                <h2 id="price"></h2>
+                <select class="my-3">
+                    <option>Select Size</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>Small</option>
+                    <option>Large</option>
+                </select>
+                <input type="number" id="quants" value="1">
+                <button class="buy-btn">Add To Cart</button>
+                <h4 class="mt-5 mb-5" >Product Details</h4>
+                <span id="productDetails">This T-shirt is no ordinary one, it can give you powers beyond your imagination. Having this t-shirt not makes you one of the rarest individual on the planet, but also the smart and certainly the coolest. Comes in 4 colors.</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="my-5 pb-5">
+        <div class="container text-center mt-5 py-5">
+            <h3>Related Products</h3>
+            <hr class="mx-auto">
+        </div>
+        <div class="row mx-auto container-fluid" id ="showRelatdProducts">
+
+
+        </div>
+    </section>
+
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <div class="modal fade" id="itemAddedModal" tabindex="-1" role="dialog" aria-labelledby="itemAddedModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="itemAddedModalLabel"><i class="fas fa-bell"></i>&#8194;Item Added to Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your item has been added to the cart successfully. You can continue shopping or go to the cart to complete your purchase.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Continue Shopping</button>
+                    <button class="btn btn-primary" onclick="window.location.href='cart.html';">Go To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../libraries/popper.min-2.9.2.js"  type='text/javascript'></script>
+    <script src="../libraries/bootstrap.min-5.0.2.js"  type='text/javascript'></script>
+    <script src="../libraries/jquery.min-3.5.1.js"  type='text/javascript'></script>
+
+    <script src="../scripts/commonScripts.js" type='text/javascript'></script>
+    <script src="../scripts/singleP.js" type='text/javascript'></script>
+    <script src="../scripts/index.js" type='text/javascript'></script>
+
+    <script>
+        $(document).ready(function(){
+          $('.buy-btn').click(function(){
+            $('.toast').toast('show');
+        
+            $('#itemAddedModal').modal('show');
+            console.log("ddd")
+
+            // Hide the modal after 2-3 seconds
+            setTimeout(function() {
+                $('#itemAddedModal').modal('hide');
+            }, 2500); // 2500 milliseconds = 2.5 seconds
+            
+        })
+
+        });
+      </script>
+  </body>
+</html>
